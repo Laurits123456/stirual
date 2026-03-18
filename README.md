@@ -9,6 +9,9 @@ It is designed for workflows where you are:
 - monitoring browser surfaces alongside terminals
 - organizing work spatially instead of through tabs alone
 
+<img width="1899" height="914" alt="{1095E03D-BC93-4E5C-B5DA-2A663F720C21}" src="https://github.com/user-attachments/assets/d1eee8db-189b-453a-ac84-fd9393b5bdfe" />
+
+
 ## What it does
 
 - Infinite-feeling canvas workspace
