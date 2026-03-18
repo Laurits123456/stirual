@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+}
+
+:root {
+  --background: #0a0c10;
+  --foreground: #f5f7fb;
+  --card: #12151a;
+  --card-foreground: #fafafa;
+  --primary: #fafafa;
+  --primary-foreground: #09090b;
+  --secondary: #171b20;
+  --secondary-foreground: #e8ebf1;
+  --muted: #13171c;
+  --muted-foreground: #8d95a2;
+  --accent: #1b2027;
+  --accent-foreground: #fafafa;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.04);
+  --ring: rgba(255, 255, 255, 0.22);
+  --sidebar: #0f1216;
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body,
+#root {
+  @apply m-0 h-full w-full bg-background text-foreground antialiased;
+}
+
+body {
+  font-family:
+    "Geist",
+    "Segoe UI Variable Text",
+    "Aptos",
+    "IBM Plex Sans",
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  background: #0a0c10;
+}
+
+.xterm,
+.xterm-viewport,
+.xterm-screen,
+.xterm-scrollable-element {
+  height: 100%;
+  width: 100%;
+}
+
+.xterm {
+  padding: 6px 8px;
+  border-radius: 0;
+}
+
+.xterm-helper-textarea {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: none !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
+
+.xterm-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+
+.xterm-viewport::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+.agent-canvas-viewport {
+  background:
+    linear-gradient(rgba(7, 10, 14, 0.76), rgba(7, 10, 14, 0.88)),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.03), transparent 30%),
+    url("/canvas-bg.jpg"),
+    #0a0c10;
+  background-position: center, center, center, center;
+  background-size: cover, auto, cover, auto;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  overflow-anchor: none;
+  overscroll-behavior: contain;
+  scroll-behavior: auto;
+}
+
+.agent-canvas-grid {
+  position: relative;
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.11) 0.95px, transparent 1.25px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0));
+  background-size: 16px 16px, 100% 100%;
+  background-position: 0 0, 0 0;
+}
+
+.agent-canvas-viewport::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.agent-canvas-viewport::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border: 3px solid #0a0c10;
+  border-radius: 999px;
+}
+
+.agent-canvas-viewport::-webkit-scrollbar-corner {
+  background: #0a0c10;
+}
